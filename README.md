@@ -1,24 +1,29 @@
-# README
+# Store Management
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Store management is a Rest API for managing store stock.
 
-Things you may want to cover:
+## Ruby version:
 
-* Ruby version
+* Ruby 2.6.5
 
-* System dependencies
+## System dependencies:
 
-* Configuration
+* PostgreSQL
 
-* Database creation
+In development environment:
 
-* Database initialization
+* [Docker](https://www.docker.com) - 19.03.12
+* [Docker Compose](https://docs.docker.com/compose/) - 1.26.0
 
-* How to run the test suite
+## Run app with docker compose:
+```bash
+git clone git@github.com:nailsong/store_management.git
+cd store_management
+docker-compose build
+docker-compose up
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## How to run the test suite:
+```bash
+docker-compose run --rm app bundle exec rspec
+```
